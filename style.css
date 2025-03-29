@@ -3,6 +3,7 @@ html, body {
     margin: 0; /* Remove margens padrão */
     padding: 0; /* Remove espaçamentos internos */
 }
+
 body {
     font-family: Arial, sans-serif;
     text-align: center;
@@ -16,6 +17,7 @@ body {
     align-items: center; /* Centraliza na vertical */
     height: 100vh; /* Faz o body ocupar toda a altura da tela */
     margin: 0; /* Remove margens */
+}
 
 /* Container que envolve o login */
 .container {
@@ -24,29 +26,33 @@ body {
     align-items: center;
     width: 100%; /* Garante que ocupe toda a largura */
     height: 100%; /* Garante que ocupe toda a altura */
-}}
+}
 
 /* Container do formulário */
 .login-container {
     background-color: #e7dfae;
     padding: 20px;
-
+    border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 300px;
 }
+
 /* Estilo do título */
 h2 {
     text-align: center;
     margin-bottom: 20px;
 }
+
 /* Grupos de entrada (usuário e senha) */
 .input-group {
     margin-bottom: 15px;
 }
+
 .input-group label {
     font-size: 14px;
     color: #333;
 }
+
 .input-group input {
     width: 100%;
     padding: 8px;
@@ -55,6 +61,7 @@ h2 {
     border: 1px solid #ddd;
     border-radius: 4px;
 }
+
 /* Estilo do botão */
 button {
     width: 100%;
@@ -66,6 +73,44 @@ button {
     font-size: 16px;
     cursor: pointer;
 }
+
 button:hover {
     background-color: #45a049;
+}
+
+/* Media Queries para tornar o layout responsivo */
+
+/* Para telas pequenas, como celulares */
+@media (max-width: 600px) {
+    body {
+        background-size: 50%; /* Reduz o tamanho do fundo */
+    }
+
+    .login-container {
+        width: 90%; /* Ajusta a largura do formulário */
+        padding: 15px;
+    }
+
+    .input-group input {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+}
+
+/* Para telas médias, como tablets */
+@media (max-width: 900px) {
+    .login-container {
+        width: 70%; /* Ajusta a largura do formulário */
+    }
+}
+
+/* Para telas grandes */
+@media (min-width: 1200px) {
+    .login-container {
+        width: 400px; /* Ajusta para uma largura maior em telas grandes */
+    }
 }
